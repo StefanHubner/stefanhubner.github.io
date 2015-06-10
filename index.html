@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="javascripts/main.js"></script>
+	<script>
+		$(function(){
+		    $("[data-load]").each(function(){
+		        $(this).load($(this).data("load"), function(){
+		        });
+		    });
+		})
+	</script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -27,6 +35,13 @@
         <a href="https://github.com/StefanHubner" class="button fork"><strong>View On GitHub</strong></a>
       </div><!-- end banner -->
 
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+	  	<nav data-load="hello.html"></nav>
+    </div>
     <div class="wrapper">
       <nav>
         <ul></ul>
